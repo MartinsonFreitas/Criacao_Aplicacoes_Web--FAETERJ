@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+
+<head>
+
+	<meta charset="UTF-8" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html">
+	<link rel="shortcut icon" href="icons/market.ico" type="image/x-icon">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="generator" content="Notepad++" >	
+	
+	<title>Minha Quintandinha de Códigos</title>
+	
+	<meta name="title" content="Minha Quintandinha de Códigos">	
+	<meta name="description" content="Projeto de avaliação válido para AV2 - Aluno: Martinson Lima de Freitas | Matrícula: 1920478300012.">	
+	<meta name="keywords" content="Minha Quitandinha,AV2,Martinson,FAETERJ">		
+	<meta name="author" content="Martinson Lima de Freitas">
+	<meta name="reply-to" content="martinson.freitas@gmail.com">	
+
+	<style>
+
+		@charset "UTF-8";
+			body,div,
+			h1,h2,p,
+			ol,ul,li {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+			
+		@font-face {
+			font-family: "Sacramento";
+			src: url("assets/Sacramento.ttf") format("truetype");
+		}
+			
+		@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+			
+		body {	
+			font: normal 12px Verdana, Arial, Helvetica, sans-serif;		
+			text-align: justify;
+			line-height: 20px;
+			color: #000000;
+			height:100%;		
+			}
+			
+		html {
+			height:100%;
+			scrollbar-width: none;
+			}
+			
+		header {
+			margin-top: -20px; 
+			width:100%;
+			height: 150px;		
+			position: fixed;
+			z-index: 9999; 
+			background: url("imagens/top.png");
+			background-repeat: repeat;
+			background-size: 89px 150px;
+			background-color: #fff;
+		}
+		
+		main { 
+			max-width: 100%; 
+			margin: 0 auto; 
+			margin-top: 0px;				 
+			padding: 120px 0 10px 0;				
+			line-height: 22px;			
+			}
+		
+		.left { 
+			float: left;
+			position: relative;
+			width: 10%;
+			height: 4000px;
+			padding: 10px; 
+			margin-top: 0px;
+			margin-bottom: 0px;				
+			background: url("imagens/sides.png");
+			background-repeat: repeat;
+			background-size: 120px 203px;
+			border: 0px solid;
+			}
+			
+		.center { 		
+			float: left;
+			align: center;
+			position: relative;
+			width: 75%; 
+			padding: 0px 0px 0px 0px; 
+			border: 0px solid; 
+			font-size: 1.4em;
+			}
+				
+		.right { 
+			float: right;
+			position: relative;
+			margin-top: 0px;
+			border: 0px solid;
+			width: 10%;
+			height: 4000px;
+			padding: 0px;
+			background: url("imagens/sides.png");
+			background-repeat: repeat;
+			background-size: 120px 203px;		
+			}
+			
+		footer { 
+			border-top: 1px solid #2E8B57;
+			background-color: #00FF7F;
+			height: 50px;
+			text-align: center; 
+			font-size: 1.1em; 
+			color: #fff;
+			width:100%; 
+			bottom: 0; 
+			position: fixed; 
+			z-index: 100;		
+			padding: 10px 0 10px 0;		
+			}
+		
+		nav {
+			margin-top: 9px; 
+			padding: 13px;  
+			position: fixed; 
+			z-index: 99999; 
+			background-color: #fff;	
+			width: 73%; 
+			border: 0px solid; 
+			}
+			
+		.video-container {
+			position: relative;
+			padding-bottom: 28%;
+			padding-top: 30px; 
+			height: 0; 
+			overflow: hidden;	
+			margin: auto;
+			margin-top: 100px;
+			width: 55%;
+			border: 3px solid green;  
+			}
+	 
+		.video-container iframe,
+		.video-container object,
+		.video-container embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			}	
+			
+		a { color: #005EB0; text-decoration: none; }	
+		a:hover { text-decoration: none; color : #000; }
+		legend { font: bold 30px Sacramento; }
+		span { font-family: 'Kalam', cursive; font-size: 16px; }
+		
+		button { 
+			padding:10px; 
+			background-color:#836FFF; 
+			border:1px solid #000; 
+			color:#fff; 
+			font-weight:bold;
+			font-size: 16px;
+			-webkit-border-radius:5px; 
+			-moz-border-radius:5px; 
+			-o-border-radius:5px; 
+			-ms-border-radius:5px;
+			border-radius:5px;
+			width: 180px;
+			}
+
+		button:hover { 
+			padding:10px; 
+			background-color:#000; 
+			border:1px solid #036; 
+			color:#fff; 
+			font-weight:bold; 
+			-webkit-border-radius:5px; 
+			-moz-border-radius:5px; 
+			-o-border-radius:5px; 
+			-ms-border-radius:5px;	
+			border-radius:5px; 
+			}
+		
+		#outdoor {
+			border: 0px solid; 
+			width: 100%; 
+			font-size: 1.2em; 
+			margin-top: 80px; 
+			text-align: center;	
+			color: #fff; 		
+			}
+		
+		#finaliza-venda {
+			width: 20%; 
+			height: 50px; 
+			float: left; 
+			margin-right: 20px; 
+			font-size: 1.2em;"
+			}
+		
+		.ghost2  { display: none; }
+		
+		.box {
+			width: 90%; 
+			padding-top: 230px;
+			border: 0px solid;		
+			text-align: left;
+			align: center;			
+			}
+		
+		.col-50 {
+			float: left;
+			width: 45%;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			padding-left:20px;
+			border: 0px solid;
+			text-align: left;
+			}
+			
+		.col-25 {
+			float: left;
+			width: 25%;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			border: 1px solid;
+		}
+		
+		.col-75 {
+			float: left;
+			width: 74%;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			border: 1px solid;
+		}
+		
+		form textarea {         
+			background-color:#f2f2f2; 
+			border:1px solid #000;
+			padding:5px; 		
+			width: 90%; 
+			-webkit-border-radius:5px; 
+			-moz-border-radius:5px;
+			-o-border-radius:5px; 
+			-ms-border-radius:5px; 
+			border-radius:5px; 
+			resize: none;			
+			}
+		
+		section { 
+			margin-left: auto;
+			margin-right: auto;
+			}
+			
+		#print { display:none; }
+		
+		#delivery form input[type="text"] { 
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+			font-size: 18px;		
+			padding:10px 10px 10px 10px; 
+			background-color:#f2f2f2; 
+			border:1px solid #000;	   
+			autocomplete:off; 
+			width: 90%; 
+			height: 500px;
+			float: left;
+			-webkit-border-radius:5px; 
+			-moz-border-radius:5px; 
+			-o-border-radius:5px;
+			-ms-border-radius:5px; 
+			border-radius:5px; 
+			}
+			
+		//img {  display: block; float: right;}
+		
+			
+		@media only screen and (max-width: 1024px) {
+		
+			.ghost  { display: none; }
+			
+			.ghost2  { display: block; }
+			
+			.box {	padding-top: 250px;	}
+			
+			.col-50 {	width: 90%;	font-size: 0.8em; }
+			
+			.col-50 img{ display: none;	}
+			
+			.row-ghost { display: none;}
+			
+			.left { display: none;	}
+			
+			.right {  display: none; }				
+			
+			#print {  display: block; float: right;}
+			
+			.center { width: 100%;	}
+			
+			.menu {	width: 100%; }
+			
+			#finaliza-venda { width: 100%; height: 50px; }
+			
+			.video-container {	margin-top: 180px;		}
+			
+			input[type=button] { font-size: 0.9em;	width: 130px;	}
+			
+		}
+		
+	</style>
+	
+	<script>
+	
+	var Pagar = 0;
+	
+		function ativarcampo(i){
+			
+			if(document.getElementById('k'+i).disabled==true){
+				document.getElementById('k'+i).disabled=false}else{
+				document.getElementById('k'+i).disabled=true;
+				document.getElementById('total'+i).value= '0,00';
+				document.getElementById('listaprodutos').innerHTML = ' ';
+				document.getElementById('TotalPagar').innerHTML = 'R$ 0,00';
+				document.getElementById('lista').style.display='none';
+				alert("Reinicie a sua compra!");
+				document.getElementById("minhaCompra").reset();
+				location.reload();
+				};
+				
+			}
+		
+		function calcularProduto(i){
+		
+			document.getElementById('total'+i).value = 
+				(document.getElementById('k'+i).value * 
+				parseFloat(document.getElementById('valor'+i).value)).toLocaleString('pt-BR', 
+				{ style: 'currency', currency: 'BRL' });
+				
+		}
+		
+				
+		function addProduto(i){
+			
+		Subtotal = document.getElementById('k'+i).value * parseFloat(document.getElementById('valor'+i).value);
+		Pagar = parseFloat(Pagar) + parseFloat(Subtotal);
+			
+			document.getElementById('listaprodutos').innerHTML = 
+				document.getElementById('listaprodutos').value +
+				document.getElementById('produto'+i).value + ' ' +
+				document.getElementById('total'+i).value + '\n';
+				
+			document.getElementById('TotalPagar').innerHTML = (Pagar).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+		}
+		
+		function FechaConta(){
+			var conta = (Pagar).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+			
+			alert("Total a pagar: " + conta);
+			document.getElementById('TotalaPagar').innerHTML = conta;
+			document.getElementById('rel-produtos').innerHTML = document.getElementById('listaprodutos').value;
+			document.getElementById('lista').style.display='none';
+			document.getElementById('Nome').placeholder = "Digite aqui o seu nome!";
+			document.getElementById('email').placeholder = "Digite aqui o seu e-mail!";
+			document.getElementById('endereco').placeholder = "Digite aqui o seu endereço para entrega!";
+			document.getElementById('telefone').placeholder = "Digite aqui o seu telefone para contato!";
+			
+		}
+		
+		function validaCampo(){
+			if(document.getElementById('Nome').value=="")
+			{
+			alert("Digite o nome, por favor!");
+			document.getElementById('Nome').onfocus;			
+			//document.getElementById('Nome').style.input.focus;
+			return false;
+			}
+			else
+			if(document.getElementById('email').value=="")
+			{
+			alert("Digite o e-mail, por favor!");
+			return false;
+			}
+			if(document.getElementById('endereco').value=="")
+			{
+			alert("Digite o endereço, por favor!");
+			return false;
+			}
+			if(document.getElementById('telefone').value=="")
+			{
+			alert("Digite o telefone, por favor!");
+			return false;
+			}
+
+			else
+			//return true;
+			document.getElementById('print').style.display='block';
+		}
+		
+		function registrar() { 
+			var nomeCliente = document.getElementById('Nome').value;
+			var emailCliente = document.getElementById('email').value;
+			var enderecoCliente = document.getElementById('endereco').value;
+			var telefoneCliente = document.getElementById('telefone').value;
+			var totalPago = (Pagar).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+			
+			document.getElementById('nomeCliente').innerHTML = nomeCliente;
+			document.getElementById('emailCliente').innerHTML = emailCliente;
+			document.getElementById('enderecoCliente').innerHTML = enderecoCliente;
+			document.getElementById('telefoneCliente').innerHTML = telefoneCliente;
+			document.getElementById('TotalPago').innerHTML = totalPago;
+			document.getElementById('lista-produtos-delivery').innerHTML = document.getElementById('rel-produtos').value;
+		}
+		
+		function PrintElem(elem) {
+			var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+			
+			var nomeCliente = document.getElementById('Nome').value;
+			var emailCliente = document.getElementById('email').value;
+			var enderecoCliente = document.getElementById('endereco').value;
+			var telefoneCliente = document.getElementById('telefone').value;
+			var totalPago = (Pagar).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+			var produtosEntregar = document.getElementById('rel-produtos').value;
+
+			mywindow.document.write('<html><head><title>' + document.title  + '</title>');
+			mywindow.document.write('</head><body >');
+			mywindow.document.write('<h1>' + document.title  + '</h1>');
+			mywindow.document.write('<p><label>Nome: </label>' + nomeCliente + '</p>');
+			mywindow.document.write('<p><label>E-mail: </label>' + emailCliente + '</p>');
+			mywindow.document.write('<p><label>Endereço: </label>' + enderecoCliente + '</p>');
+			mywindow.document.write('<p><label>Telefone: </label>' + telefoneCliente + '</p>');
+			mywindow.document.write('<p><label>Total a pagar: </label>' + totalPago + '</p>');
+			mywindow.document.write('<p><label>Produtos para entrega: </label>' + produtosEntregar + '</p>');
+			mywindow.document.write(document.getElementById(elem).innerHTML);
+			mywindow.document.write('</body></html>');
+
+			mywindow.document.close(); // necessary for IE >= 10
+			mywindow.focus(); // necessary for IE >= 10*/
+
+			mywindow.print();
+			mywindow.close();
+
+			return true;
+		}
+		
+		function mascara(t, mask){
+			var i = t.value.length;
+			var saida = mask.substring(1,0);
+			var texto = mask.substring(i)
+			
+				if (texto.substring(0,1) != saida){
+				t.value += texto.substring(0,1);
+			}
+		}
+		
+	</script>
+	
+</head>
+
+<body>
+
+<header>
+
+	<!-- DIV FIGURATIVA APENAS PARA INSERÇÃO DO BACKGROUND -->
+	
+	<section id="outdoor">
+		<font size="5" class="ghost"><b>MINHA </font><font size="5">QUINTANDINHA</b></font><br />
+	</section>
+	
+</header>
+
+	<div style="clear:both;"> </div>
+
+<main>
+
+	<aside class="left">
+
+		<!-- DIV FIGURATIVA APENAS PARA INSERÇÃO DO BACKGROUND -->
+		
+	</aside>
+	
+	<section id="lista" style="display: none; position: fixed; margin-top:8%; margin-left: 85%; background-color: #ffffff; width: 190px; height: 320px; z-index: 1;">
+	
+		<textarea id="listaprodutos" style="width: 180px; height: 280px;"></textarea>
+		<label for="Total a pagar">Total a pagar: <label>
+		<span id="TotalPagar">00,00</span>
+	
+	</section>
+
+	
+	<article class="center">
+	
+		<!-- DIV ONDE TODA MÍDIA SERÁ CARREGADA -->
+	
+		<nav style="align:center;">		
+		
+			<table class="ghost" border="0" style="width: 100%;">			
+				<tr>				
+					<td align="center">
+						<a href="#frutas">
+							<button type="button" style="cursor:pointer;" />  FRUTAS </button>
+						</a>
+					</td>					
+					<td align="center">
+						<a href="#verduras">
+							<button type="button" style="cursor:pointer;" />  VERDURAS </button>
+						</a>
+					</td>					
+					<td align="center">
+						<a href="#legumes">
+							<button type="button" style="cursor:pointer;" />  LEGUMES </button>
+						</a>
+					</td>						
+					<td align="center">
+						<a href="#mercado">
+							<button type="button" style="cursor:pointer;" />  MERCADO  </button>
+						</a>
+					</td>					
+				</tr>			
+			</table>
+			
+			<table class="ghost2" border="0" style="width: 100%;">			
+				<tr>				
+					<td align="center">
+						<a href="#frutas">
+							<input type="button" value="FRUTAS" style="cursor:pointer;" />
+						</a>
+					</td>				
+					<td align="center">
+						<a href="#verduras">
+							<input type="button" src="verduras" value="VERDURAS" style="cursor:pointer;" />
+						</a>
+					</td>
+				</tr>				
+				<tr>	
+					<td align="center">
+						<a href="#legumes">
+							<input type="button" src="legumes" value="LEGUMES" style="cursor:pointer;" />
+						</a>
+					</td>					
+					<td align="center">
+						<a href="#mercado">
+							<input type="button" src="mercado" value="MERCADO" style="cursor:pointer;" />
+						</a>
+					</td>
+				</tr>			
+			</table>
+						
+		</nav>	
+	
+
+		<div class="video-container" >		
+			<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ptPY47z9VTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			
+		</div>
+		
+	<form id="meuCarrinho" name="meuCarrinho" action="#">
+			
+		<section id="frutas" class="box" style="align: center;">		
+			<fieldset name="compras">
+				<legend>Comprar Frutas</legend>
+				<div class="row">
+					<div class="col-50">
+					
+						<img src="imagens/frutas/banana.jpg" height="30">
+						
+						<input type="checkbox" name="produto1" id="produto1" value="Banana" onclick="ativarcampo(1)"> 
+
+						<label for="banana">Banana</label>
+						
+						<select name="qte1" type="text" id="k1" disabled="disabled" onChange="calcularProduto(1); addProduto(1)">
+						
+							<option value=""> Kilos </option>
+							<option value="1"> 1 </option>
+							<option value="2"> 2 </option>
+							<option value="3"> 3 </option>
+							<option value="4"> 4 </option>
+							<option value="5"> 5 </option>
+							
+						</select>
+
+						<label> X </label>							
+						<input type="text" value="1.50" id="valor1" name="valor1" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total1" name="total1" size="5" disabled="disabled">
+						
+					</div>
+					
+					<div class="col-50">
+						<img src="imagens/frutas/maca.jpg" height="30">
+						<input type="checkbox" name="produto2" id="produto2" value="Maçã" onclick="ativarcampo(2)"> 
+						
+						<label for="Maçã">Maçã</label>
+						
+							<select name="qte2" type="text" id="k2" disabled="disabled" onChange="calcularProduto(2); addProduto(2)">
+							
+								<option value=""> Kilos </option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select>
+							
+						<label> X </label>
+						<input type="text" value="5.50" id="valor2" name="valor2" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total2" name="total2" size="5" disabled="disabled">
+						
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-50">
+						<img src="imagens/frutas/abacate.jpg" height="30">
+						<input type="checkbox" name="produto3" id="produto3" value="Abacate" onclick="ativarcampo(3)"> 
+						
+						<label for="Abacate">Abacate</label>
+						
+							<select name="qte3" type="text" id="k3" disabled="disabled" onChange="calcularProduto(3); addProduto(3)">
+							
+								<option value=""> Kilos </option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select> 
+							
+						<label> X </label>
+						<input type="text" value="4.20" id="valor3" name="valor3" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total3" name="total3" size="5" disabled="disabled">
+						
+					</div>
+					
+					<div class="col-50" >
+						<img src="imagens/frutas/acerola.jpg" height="30">
+						<input type="checkbox" name="produto4" id="produto4" value="Acerola" onclick="ativarcampo(4)"> 
+						
+						<label for="Acerola">Acerola</label>
+						
+							<select name="qte4" type="text" id="k4" disabled="disabled" onChange="calcularProduto(4); addProduto(4)">
+							
+								<option value=""> Kilos </option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select>
+							
+						<label> X </label>
+						<input type="text" value="3.00" id="valor4" name="valor4" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total4" name="total4" size="5" disabled="disabled">
+						
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-50">
+						<img src="imagens/frutas/caju.jpg" height="30">
+						<input type="checkbox" name="produto5" id="produto5" value="Caju" onclick="ativarcampo(5)">
+						
+						<label for="Caju">Caju</label>
+						
+							<select name="qte5" type="text" id="k5" disabled="disabled" onChange="calcularProduto(5); addProduto(5)">
+							
+								<option value=""> Kilos </option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select> 
+							
+							<label> X </label>
+						<input type="text" value="7.30" id="valor5" name="valor5" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total5" name="total5" size="5" disabled="disabled">
+						
+					</div>
+					
+					<div class="col-50" >
+						<img src="imagens/frutas/laranja.jpg" height="30">
+						
+						<input type="checkbox" name="produto6" id="produto6" value="Laranja" onclick="ativarcampo(6)">
+						
+						<label for="Laranja">Laranja</label>
+						
+							<select name="qte" type="text" id="k6" disabled="disabled" onChange="calcularProduto(6); addProduto(6)">	
+							
+								<option value=""> Kilos </option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select> 
+							
+						<label> X </label>
+						<label> = </label>
+						<input type="text" value="3.15" id="valor6" name="valor6" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total6" name="total6" size="5" disabled="disabled">						
+					</div>
+				</div>					
+				
+				<div class="row-ghost">
+					<div class="col-50" style="float: right; width: 90%; border: 0px solid; text-align: right;">
+						&nbsp;&nbsp;
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-50" style="float: right; width: 90%; border: 0px solid; text-align: right;">
+						<a href="#frutas" onclick="document.getElementById('lista').style.display='block'; ">
+						
+							<img src="icons/carrinho.jpg" width="25" >
+							<span>Adicionar ao Carrinho</span>
+						</a>
+					</div>
+				</div>
+			</fieldset>				
+		</section>			
+			
+		<section id="verduras" class="box" >	
+			<fieldset name="compras">
+			<legend>Comprar Verduras</legend>
+				<div class="row">
+					<div class="col-50">
+					
+						<img src="imagens/verduras/brocolis.jpg" height="30">
+						
+						<input type="checkbox" name="produto7" id="produto7" value="Brócolis" onclick="ativarcampo(7)">
+						<label for="Brócolis">Brócolis</label>
+						
+							<select name="qte" type="text" id="k7" disabled="disabled" onChange="calcularProduto(7); addProduto(7)">	
+							
+								<option value=""> Kilos </option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select>
+							
+						<label> X </label>
+						<input type="text" value="5.00" id="valor7" name="valor7" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total7" name="total7" size="5" disabled="disabled">
+						
+					</div>
+					
+					<div class="col-50">
+						<img src="imagens/verduras/alface.jpg" height="30">
+						<input type="checkbox" name="produto8" id="produto8" value="Alface" onclick="ativarcampo(8)">
+						<label for="Alface">Alface</label>
+						
+							<select name="qte" type="text" id="k8" disabled="disabled" onChange="calcularProduto(8); addProduto(8)">
+							
+								<option value="">Unid</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select> 
+							
+						<label> X </label>
+						<input type="text" value="1.80" id="valor8" name="valor8" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total8" name="total8" size="5" disabled="disabled">
+					</div>
+					
+				</div>
+				
+				<div class="row">
+					<div class="col-50">
+					
+						<img src="imagens/verduras/acelga.jpg" height="30">
+						<input type="checkbox" name="produto9" id="produto9" value="Acelga" onclick="ativarcampo(9)">
+						<label for="Acelga">Acelga</label>
+						
+							<select name="qte" type="text" id="k9" disabled="disabled" onChange="calcularProduto(9); addProduto(9)">
+							
+								<option value="">Unid</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select> 
+							
+						<label> X </label>
+						<input type="text" value="4.19" id="valor9" name="valor9" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total9" name="total9" size="5" disabled="disabled">
+						
+					</div>
+					
+					<div class="col-50" >
+					
+						<img src="imagens/verduras/couve.jpg" height="30">
+						<input type="checkbox" name="produto10" id="produto10" value="Couve" onclick="ativarcampo(10)">
+						<label for="Couve">Couve</label>
+						
+							<select name="qte" type="text" id="k10" disabled="disabled" onChange="calcularProduto(10); addProduto(10)">
+							
+								<option value="">Unid</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>		
+								
+							</select>  
+
+						<label> X </label>
+						<input type="text" value="3.75" id="valor10" name="valor10" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total10" name="total10" size="5" disabled="disabled">
+
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-50">
+
+						<img src="imagens/verduras/espinafre.jpg" height="30">
+						<input type="checkbox" name="produto11" id="produto11" value="Espinafre" onclick="ativarcampo(11)">
+						<label for="Espinafre">Espinafre</label>							
+
+							<select name="qte" type="text" id="k11" disabled="disabled" onChange="calcularProduto(11); addProduto(11)">
+							
+								<option value="">Unid</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select> 
+							
+							<label> X </label>
+						<input type="text" value="1.99" id="valor11" name="valor11" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total11" name="total11" size="5" disabled="disabled">
+						
+					</div>
+					
+					<div class="col-50" >
+					
+						<img src="imagens/verduras/rucula.jpg" height="30">
+						<input type="checkbox" name="produto12" id="produto12" value="Rúcula" onclick="ativarcampo(12)">
+						<label for="Rúcula">Rúcula</label>
+						
+							<select name="qte" type="text" id="k12" disabled="disabled" onChange="calcularProduto(12); addProduto(12)">
+							
+								<option value="">Unid</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select>
+							
+							<label> X </label>
+						<input type="text" value="4.79" id="valor12" name="valor12" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total12" name="total12" size="5" disabled="disabled">							
+					</div>
+				</div>					
+				
+				<div class="row-ghost">
+					<div class="col-50" style="float: right; width: 90%; border: 0px solid; text-align: right;">
+						&nbsp;&nbsp;
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-50" style="float: right; width: 90%; border: 0px solid; text-align: right;">
+						<a href="#verduras" onclick="document.getElementById('lista').style.display='block'; ">
+							<img src="icons/carrinho.jpg" width="25" >
+							<span>Adicionar ao Carrinho</span>
+						</a>
+					</div>
+				</div>
+			</fieldset>	
+		</section>
+		
+		<section id="legumes" class="box" >		
+			<fieldset name="compras">
+			<legend>Comprar Legumes</legend>
+				<div class="row">
+				
+					<div class="col-50">
+					
+						<img src="imagens/legumes/abobora.jpg" height="30">
+						<input type="checkbox" name="produto13" id="produto13" value="Abóbora" onclick="ativarcampo(13)">
+						<label for="Abóbora">Abóbora</label> 
+							
+							<select name="qte" type="text" id="k13" disabled="disabled" onChange="calcularProduto(13); addProduto(13)">
+							
+								<option value="">Kilo</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select>
+							
+						<label> X </label>
+						<input type="text" value="3.77" id="valor13" name="valor13" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total13" name="total13" size="5" disabled="disabled">
+					</div>
+					
+					<div class="col-50">
+						<img src="imagens/legumes/aipim.jpg" height="30">
+						<input type="checkbox" name="produto14" id="produto14" value="Aipim" onclick="ativarcampo(14)">
+						<label for="Aipim">Aipim</label> 
+													
+							<select name="qte" type="text" id="k14" disabled="disabled" onChange="calcularProduto(14); addProduto(14)">
+							
+								<option value="">Kilo</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select>
+							
+						<label> X </label>
+						<input type="text" value="4.99" id="valor14" name="valor14" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total14" name="total14" size="5" disabled="disabled">
+					</div>
+					
+				</div>
+				
+				<div class="row">
+					<div class="col-50">
+						<img src="imagens/legumes/abobrinha.jpg" height="30">
+						<input type="checkbox" name="produto15" id="produto15" value="Abobrinha" onclick="ativarcampo(15)">
+						<label for="Abobrinha">Abobrinha</label>							
+						
+							<select name="qte" type="text" id="k15" disabled="disabled" onChange="calcularProduto(15); addProduto(15)">
+							
+								<option value="">Kilo</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>									
+							</select> 
+							
+						<label> X </label>
+						<input type="text" value="8.59" id="valor15" name="valor15" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total15" name="total15" size="5" disabled="disabled">
+					</div>
+					
+					<div class="col-50" >
+						<img src="imagens/legumes/alho.jpg" height="30">
+						<input type="checkbox" name="produto16" id="produto16" value="Alho" onclick="ativarcampo(16)">
+						<label for="Alho">Alho</label>	
+						
+							<select name="qte" type="text" id="k16" disabled="disabled" onChange="calcularProduto(16); addProduto(16)">
+							
+								<option value="">Unid</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>									
+							</select> 
+							
+						<label> X </label>
+						<input type="text" value="3.99" id="valor16" name="valor16" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total16" name="total16" size="5" disabled="disabled">
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-50">
+						<img src="imagens/legumes/batata.jpg" height="30">
+						<input type="checkbox" name="produto17" id="produto17" value="Batata" onclick="ativarcampo(17)">
+						<label for="Batata">Batata</label>	
+						
+							<select name="qte" type="text" id="k17" disabled="disabled" onChange="calcularProduto(17); addProduto(17)">
+							
+								<option value="">Kilo</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>									
+							</select> 
+							
+						<label> X </label>
+						<input type="text" value="10.39" id="valor17" name="valor17" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total17" name="total17" size="5" disabled="disabled">
+					</div>
+					
+					<div class="col-50" >
+						<img src="imagens/legumes/berinjela.jpg" height="30">
+						<input type="checkbox" name="produto18" id="produto18" value="Berinjela" onclick="ativarcampo(18)">
+						<label for="Berinjela">Berinjela</label>	
+						
+							<select name="qte" type="text" id="k18" disabled="disabled" onChange="calcularProduto(18); addProduto(18)">
+							
+								<option value="">Kilos</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>									
+							</select> 
+							
+						<label> X </label>							
+						<input type="text" value="10.39" id="valor18" name="valor18" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total18" name="total18" size="5" disabled="disabled">				
+					</div>
+				</div>					
+				
+				<div class="row-ghost">
+					<div class="col-50" style="float: right; width: 90%; border: 0px solid; text-align: right;">
+						&nbsp;&nbsp;
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-50" style="float: right; width: 90%; border: 0px solid; text-align: right;">
+						<a href="#legumes" onclick="document.getElementById('lista').style.display='block'; ">
+							<img src="icons/carrinho.jpg" width="25" >
+							<span>Adicionar ao Carrinho</span>
+						</a>
+					</div>
+				</div>
+			</fieldset>	
+		</section>
+		
+		<section id="mercado" class="box" >	
+			<fieldset name="compras">
+			<legend>Comprar Mercadinho</legend>
+				<div class="row">
+					<div class="col-50">
+						<img src="imagens/mercado/arroz.jpg" height="30">
+						<input type="checkbox" name="produto19" id="produto19" value="Arroz" onclick="ativarcampo(19)">
+						<label for="Arroz">Arroz</label>							
+						
+							<select name="qte" type="text" id="k19" disabled="disabled" onChange="calcularProduto(19); addProduto(19)">
+							
+								<option value="">Kilo</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>									
+							</select>
+						<label> X </label>
+						<input type="text" value="4.99" id="valor19" name="valor19" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total19" name="total19" size="5" disabled="disabled">
+					</div>
+					
+					<div class="col-50">
+						<img src="imagens/mercado/feijao.jpg" height="30">
+						<input type="checkbox" name="produto20" id="produto20" value="Feijão" onclick="ativarcampo(20)">
+						<label for="Feijão">Feijão</label>							
+						
+							<select name="qte" type="text" id="k20" disabled="disabled" onChange="calcularProduto(20); addProduto(20)">
+							
+								<option value="">Kilo</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select>
+							
+							<label> X </label>
+						<input type="text" value="7.99" id="valor20" name="valor20" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total20" name="total20" size="5" disabled="disabled">
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-50">
+						<img src="imagens/mercado/macarrao.jpg" height="30">
+						<input type="checkbox" name="produto21" id="produto21" value="Macarrão" onclick="ativarcampo(21)">
+						<label for="Macarrão">Macarrão</label>							
+						
+							<select name="qte" type="text" id="k21" disabled="disabled" onChange="calcularProduto(21); addProduto(21)">
+							
+								<option value="">Unid</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select>  
+							
+						<label> X </label>
+						<input type="text" value="4.75" id="valor21" name="valor21" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total21" name="total21" size="5" disabled="disabled">
+					</div>
+					
+					<div class="col-50" >
+						<img src="imagens/mercado/frango.jpg" height="30">
+						<input type="checkbox" name="produto22" id="produto22" value="Frango" onclick="ativarcampo(22)">
+						<label for="Frango">Frango</label>							
+							
+							<select name="qte" type="text" id="k22" disabled="disabled" onChange="calcularProduto(22); addProduto(22)">
+							
+								<option value="">Kilo</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>									
+							</select> 
+							
+						<label> X </label>
+						<input type="text" value="10.59" id="valor22" name="valor22" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total22" name="total22" size="5" disabled="disabled">
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-50">
+						<img src="imagens/mercado/sardinha.jpg" height="30">
+						<input type="checkbox" name="produto23" id="produto23" value="Sardinha" onclick="ativarcampo(23)">
+						<label for="Sardinha">Sardinha</label>							
+						
+							<select name="qte" type="text" id="k23" disabled="disabled" onChange="calcularProduto(23); addProduto(23)">
+							
+								<option value="">Unid</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select>  
+						
+						<label> X </label>
+						<input type="text" value="5.89" id="valor23" name="valor23" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total23" name="total23" size="5" disabled="disabled">
+					</div>
+					
+					<div class="col-50" >
+						<img src="imagens/mercado/carne.jpg" height="30">
+						<input type="checkbox" name="produto24" id="produto24" value="Carne" onclick="ativarcampo(24)">
+						<label for="Carne">Carne</label>							
+						
+							<select name="qte" type="text" id="k24" disabled="disabled" onChange="calcularProduto(24); addProduto(24)">
+							
+								<option value="">Kilo</option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+								<option value="4"> 4 </option>
+								<option value="5"> 5 </option>
+								
+							</select> 
+							
+						<label> X </label>							
+						<input type="text" value="46.50" id="valor24" name="valor24" size="5" disabled="disabled">
+						<label> = </label>
+						<input type="text" value="0,00" id="total24" name="total24" size="5" disabled="disabled">					
+					</div>
+				</div>					
+				
+				<div class="row-ghost">
+					<div class="col-50" style="float: right; width: 90%; border: 0px solid; text-align: right;">
+						&nbsp;&nbsp;
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-50" style="float: right; width: 90%; border: 0px solid; text-align: right;">
+						<a href="#mercado" onclick="document.getElementById('lista').style.display='block'; ">
+							<img src="icons/carrinho.jpg" width="25" >
+							<span>Adicionar ao Carrinho</span>
+						</a>
+					</div>
+				</div>
+			</fieldset>	
+		</section>
+		
+		<section id="delivery" class="box" >	
+			<fieldset name="compras">
+				<legend>Dados para entrega:</legend>	
+					
+					<div class="col-50">
+						<label for="nome">Nome: </label><br>
+						<input type="text" id="Nome" name="Nome" value="" size="40" 
+						autocomplete="off" required
+						style="	font-size: 18px;		
+								padding:5px 5px 5px 5px; 
+								background-color:#f2f2f2; 
+								border:1px solid #000;	   
+								autocomplete:off; 
+								width: 90%; 
+								height: 15px;
+								float: left;
+								-webkit-border-radius:5px; 
+								-moz-border-radius:5px; 
+								-o-border-radius:5px;
+								-ms-border-radius:5px; 
+								border-radius:5px; "
+						/>							
+						
+						<label for="email">E-mail: </label><br>
+						<input name="email" type="email" id="email" value="" size="40"
+						autocomplete="off"
+						style="	font-size: 18px;		
+								padding:5px 5px 5px 5px; 
+								background-color:#f2f2f2; 
+								border:1px solid #000;	   
+								autocomplete:off; 
+								width: 90%; 
+								height: 15px;
+								float: left;
+								-webkit-border-radius:5px; 
+								-moz-border-radius:5px; 
+								-o-border-radius:5px;
+								-ms-border-radius:5px; 
+								border-radius:5px; "
+						/>						
+														
+						<label for="endereco">Endereço: </label><br>
+						<input name="endereco" type="text" id="endereco" value="" size="40"
+						autocomplete="off"
+						style="	font-size: 18px;		
+								padding:5px 5px 5px 5px; 
+								background-color:#f2f2f2; 
+								border:1px solid #000;	   
+								autocomplete:off; 
+								width: 90%; 
+								height: 15px;
+								float: left;
+								-webkit-border-radius:5px; 
+								-moz-border-radius:5px; 
+								-o-border-radius:5px;
+								-ms-border-radius:5px; 
+								border-radius:5px; "
+						/>						
+					
+						<label for="fone">Telefone: </label><br>
+						<input name="telefone" type="tel" id="telefone" value="" size="20"
+						autocomplete="off" onkeypress="mascara(this, '## ####-####')"
+						style="	font-size: 18px;		
+								padding:5px 5px 5px 5px; 
+								background-color:#f2f2f2; 
+								border:1px solid #000;	   
+								autocomplete:off; 
+								width: 45%; 
+								height: 15px;
+								float: left;
+								-webkit-border-radius:5px; 
+								-moz-border-radius:5px; 
+								-o-border-radius:5px;
+								-ms-border-radius:5px; 
+								border-radius:5px; "
+						/>
+														
+					</div>
+											
+					<div class="col-50">
+						<label for="nome">Relação de Produtos:</label><br>
+						<textarea id="rel-produtos" name="rel-produtos" rows="10" cols="40" disabled="disabled">
+							&nbsp;&nbsp;
+						</textarea>
+					</div>
+					
+					<div class="row">
+						<div class="col-50"><b>PAGAMENTO NO ATO DA ENTREGA</b></div>
+						
+						<div class="col-50">
+							<label for="Total_label">TOTAL: </label>
+							<span id="TotalaPagar"></span>
+															
+							<a href="#print" onclick="validaCampo(); registrar(); " >									
+								<img src="icons/caixa-registradora.jpg" style="display: block; float: right; width: 30px;">
+							</a>
+						</div>
+					</div>
+								
+			</fieldset>
+			
+		</section>		
+			
+	</form>
+	
+	<section id="print" class="box" >	
+		<fieldset name="compras">
+			<legend>Dados para entrega:</legend>
+				
+				<article class="col-50">
+					<label for="nome">Nome: </label>
+					<br>
+					<span id="nomeCliente"></span>
+					<br>
+											
+					<label for="email">E-mail: </label>
+					<br>
+					<span id="emailCliente"></span>
+					<br>
+												
+					<label for="endereco">Endereço: </label>
+					<br>
+					<span id="enderecoCliente"></span>
+					<br>
+										
+					<label for="fone">Telefone: </label>
+					<br>
+					<span id="telefoneCliente"></span>
+					<br>
+				</article>
+				
+				<article class="col-50">
+					<label for="nome">Relação de Produtos:</label>
+					<br>
+					<textarea id="lista-produtos-delivery" name="lista-produtos-delivery" rows="10" cols="40" disabled="disabled">
+						&nbsp;&nbsp;
+					</textarea>
+					<br>
+				</article>
+				
+				<section class="row">
+					<article class="col-50">
+					<span>PAGAMENTO NO ATO DA ENTREGA</span>
+					<br>
+					</article>
+					
+					<article class="col-50">
+					<label for="Total_label">TOTAL: </label>
+					<span id="TotalPago"></span>
+					
+					<a href="#print" onclick="PrintElem('print')" >									
+						<img src="icons/print.jpg" style="display: block; float: right; width: 30px;">
+					</a>
+					</article>									
+				</section>								
+		</fieldset>			
+	</section>
+	
+</article>
+
+	<aside class="right">
+
+		<!-- DIV FIGURATIVA APENAS PARA INSERÇÃO DO BACKGROUND -->
+		
+	</aside>			
+		
+	<div style="clear:both;"> </div>
+
+</main>
+
+<footer>
+	<aside id="coluna" class="ghost" style="width: 18%; height: 50px; float: left; ">
+		
+	</aside>
+	<aside id="dados" class="ghost" style="float: left; border: 0px solid; width: 60%; font-size: 1.2em;">
+		
+		<font size="1" class="ghost">&copy; Copyright 2021 by <a href="#">Martinson Freitas</a> 
+		- Matrícula: 1920478300012 | CAW / FAETERJ </font>
+	</aside>
+	
+	<aside id="finaliza-venda">
+		<a href="#delivery">
+			<button onclick="FechaConta()" style="cursor:pointer;" /> Finalizar Compra </button>
+		</a>
+	</aside>
+</footer>
+
+</body>
+</html>

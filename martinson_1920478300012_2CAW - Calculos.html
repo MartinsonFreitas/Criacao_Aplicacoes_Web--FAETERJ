@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+
+<head>
+
+	<meta charset="UTF-8" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html">
+	<link rel="shortcut icon" href="icons/market.ico" type="image/x-icon">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="generator" content="Notepad++" >	
+	
+	<title>Operações Matemáticas</title>
+	
+	<meta name="title" content="Operações Matemáticas">	
+	<meta name="description" content="Projeto de avaliação válido para AV2 - Aluno: Martinson Lima de Freitas | Matrícula: 1920478300012.">	
+	<meta name="keywords" content="Operações Matemáticas,  AV2, Martinson, FAETERJ">		
+	<meta name="author" content="Martinson Lima de Freitas">
+	<meta name="reply-to" content="martinson.freitas@gmail.com">	
+
+	<style>
+
+		@charset "UTF-8";
+			body,div,
+			h1,h2,p,
+			ol,ul,li {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+			
+		@font-face {
+			font-family: "Sacramento";
+			src: url("assets/Sacramento.ttf") format("truetype");
+		}
+			
+		@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+			
+		body {	
+			font: normal 12px Verdana, Arial, Helvetica, sans-serif;		
+			text-align: justify;
+			line-height: 20px;
+			color: #000000;
+			height:100%;		
+			}
+			
+		html {
+			height:100%;
+			scrollbar-width: none;
+			}
+			
+		header {
+			margin-top: -20px; 
+			width:100%;
+			height: 150px;		
+			position: fixed;
+			z-index: 9999; 
+			background-repeat: repeat;
+			background-size: 89px 150px;
+			background-color: #000000;
+		}
+		
+		main { 
+			max-width: 100%; 
+			margin: 0 auto; 
+			margin-top: 0px;				 
+			padding: 121px 0 10px 0;				
+			line-height: 22px;			
+			}
+		
+		.left { 
+			float: left;
+			position: relative;
+			width: 10%;
+			height: 4000px;
+			padding: 10px; 
+			margin-top: 0px;
+			margin-bottom: 0px;				
+			background-color: #000000;
+			background-repeat: repeat;
+			background-size: 120px 203px;
+			border: 0px solid;
+			}
+			
+		.center { 		
+			float: left;
+			align: center;
+			position: relative;
+			width: 75%; 
+			padding: 0px 0px 0px 0px; 
+			border: 0px solid; 
+			font-size: 1.4em;
+			}
+				
+		.right { 
+			float: right;
+			position: relative;
+			margin-top: 0px;
+			border: 0px solid;
+			width: 10%;
+			height: 4000px;
+			padding: 0px;
+			background-size: 120px 203px;
+			background-color: #000000;			
+			}
+			
+		footer { 
+			background-color: #000000;
+			height: 50px;
+			text-align: center; 
+			font-size: 1.1em; 
+			color: #fff;
+			width:100%; 
+			bottom: 0; 
+			position: fixed; 
+			z-index: 100;		
+			padding: 10px 0 10px 0;		
+			}
+		
+		nav {
+			margin-top: 9px;
+			margin-left: 0px;
+			padding: 13px;  
+			position: fixed; 
+			z-index: 99999; 
+			
+			width: 76.8%; 
+			border: 0px solid; 
+			}
+				
+			
+		a { color: #005EB0; text-decoration: none; }	
+		a:hover { text-decoration: none; color : #000; }
+		legend { font: bold 30px Sacramento; }
+		span { font-family: 'Kalam', cursive; font-size: 16px; }
+		
+		button { 
+			padding:10px; 
+			background-color:#000000; 
+			border:1px solid #036;  
+			color:#fff; 
+			font-weight:bold;
+			font-size: 16px;
+			-webkit-border-radius:5px; 
+			-moz-border-radius:5px; 
+			-o-border-radius:5px; 
+			-ms-border-radius:5px;
+			border-radius:5px;
+			width: 180px;
+			}
+
+		button:hover { 
+			padding:10px; 
+			background-color:#836FFF; 
+			border:1px solid #036; 
+			color:#fff; 
+			font-weight:bold; 
+			-webkit-border-radius:5px; 
+			-moz-border-radius:5px; 
+			-o-border-radius:5px; 
+			-ms-border-radius:5px;	
+			border-radius:5px; 
+			}
+			
+		#mostrarDicas {
+			display: none; 
+			position: fixed; 
+			margin-top:8%; 
+			margin-left: 85%; 
+			background-color: #ffffff;			
+			width: 190px; 
+			height: 320px; z-index: 1;"		
+		}
+		
+		#soma {
+			display: none; 
+			}
+			
+		#subtracao {
+			display: none; 
+			}
+		
+		#multiplicacao {
+			display: none; 
+			}
+		
+		#divisao {
+			display: none; 
+			}
+			
+		#media {
+			display: none; 
+			}
+
+		#titulo {
+			border: 0px solid; 
+			width: 100%; 
+			font-size: 1.2em; 
+			margin-top: 80px; 
+			text-align: center;	
+			color: #fff; 		
+			}
+		
+		.box {
+			width: 60%; 
+			padding-top: 300px;
+			border: 0px solid;		
+			text-align: left;
+			align: center;			
+			}
+		
+		.col-90 {			
+			width: 90%;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			margin-right: auto;
+			margin-left: auto;
+			padding-left:20px;
+			border: 0px solid;
+			text-align: left;
+			}
+		
+		section { 
+			margin-left: auto;
+			margin-right: auto;
+			}
+			
+		
+		input[type="text"] { 
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+			font-size: 16px;
+			text-align: center;			
+			background-color: #ffffb3; 
+			border:1px solid #000;	   
+			autocomplete:off; 
+			width: 70px; 
+			height: 20px;			
+			-webkit-border-radius:5px; 
+			-moz-border-radius:5px; 
+			-o-border-radius:5px;
+			-ms-border-radius:5px; 
+			border-radius:5px; 
+			}
+				
+	</style>
+	
+	<script>
+	function mostrarDicas(i){
+	
+		var dicaSoma = "Dicas de Soma: digite dois números nos campos 1 e 2, em seguida clique na calculadora para obter o resultado!";
+		var dicaSubtracao = "Dicas de Subtração: digite dois números nos campos 1 e 2, em seguida clique na calculadora para obter o resultado. Lembrando que para se obter resultado positivo o número maior deverá ser digitado no campo 1!";
+		var dicaMultiplicacao = "Dicas de Multiplicação: Digite dois números quaisquer para realizar a operação!";
+		var dicaDivisao = "Dicas de Divisão: Para realizar divisão, lembre-se que o número maior deverá ser digitado no campo número 1!";
+		var dicaMedia = "Dicas de Media: A média aritmética entre três números quaisquer é obtida através da soma dos númeors e em seguida dividimos pela quantidade de números somados, em nosso caso... 3!";
+		
+		document.getElementById('mostrarDicas').style.display='block';
+		document.body.style.backgroundColor = "white";
+		
+		if (i == 1) {			
+			document.getElementById('soma').style.display='block';
+			document.getElementById('subtracao').style.display='none';
+			document.getElementById('multiplicacao').style.display='none';
+			document.getElementById('divisao').style.display='none';
+			document.getElementById('media').style.display='none';
+			document.getElementById('valor1').placeholder = "campo 1";
+			document.getElementById('valor2').placeholder = "campo 2";
+			document.getElementById('dicas').innerHTML = dicaSoma;
+		}		
+		if (i == 2) {
+			document.getElementById('soma').style.display='none';
+			document.getElementById('subtracao').style.display='block';
+			document.getElementById('multiplicacao').style.display='none';
+			document.getElementById('divisao').style.display='none';
+			document.getElementById('media').style.display='none';
+			document.getElementById('valor3').placeholder = "campo 1";
+			document.getElementById('valor4').placeholder = "campo 2";
+			document.getElementById('dicas').innerHTML = dicaSubtracao;
+			} 
+		
+		if (i == 3) {
+			document.getElementById('soma').style.display='none';
+			document.getElementById('subtracao').style.display='none';
+			document.getElementById('multiplicacao').style.display='block';
+			document.getElementById('media').style.display='none';
+			document.getElementById('divisao').style.display='none';			
+			document.getElementById('valor5').placeholder = "campo 1";
+			document.getElementById('valor6').placeholder = "campo 2";
+			document.getElementById('dicas').innerHTML = dicaMultiplicacao;
+			} 
+				
+		if (i == 4) {
+			document.getElementById('soma').style.display='none';
+			document.getElementById('subtracao').style.display='none';
+			document.getElementById('multiplicacao').style.display='none';
+			document.getElementById('divisao').style.display='block';
+			document.getElementById('media').style.display='none';
+			document.getElementById('valor7').placeholder = "campo 1";
+			document.getElementById('valor8').placeholder = "campo 2";
+			document.getElementById('dicas').innerHTML = dicaDivisao;
+		}
+		
+		if (i == 5) {
+			
+			document.getElementById('soma').style.display='none';
+			document.getElementById('subtracao').style.display='none';
+			document.getElementById('multiplicacao').style.display='none';
+			document.getElementById('divisao').style.display='none';	
+			document.getElementById('media').style.display='block';
+			document.getElementById('valor9').placeholder = "campo 1";
+			document.getElementById('valor10').placeholder = "campo 2";
+			document.getElementById('valor11').placeholder = "campo 3";
+			document.getElementById('dicas').innerHTML = dicaMedia;
+		}
+	}
+	
+		// SOMA //
+		function somar(){	
+		
+			document.getElementById('total1').value = 
+				parseFloat(document.getElementById('valor1').value) + parseFloat(document.getElementById('valor2').value);
+				
+			document.getElementById('mostrarDicas').style.display='none';				
+		}
+		
+		// SUBTRAIR //
+		function subtrair(){
+		
+			document.getElementById('total2').value = 
+				parseFloat(document.getElementById('valor3').value) - parseFloat(document.getElementById('valor4').value);
+				
+				document.getElementById('mostrarDicas').style.display='none';	
+		}
+		
+		// MULTIPLICAR //
+		function multiplicar(){
+		
+			document.getElementById('total3').value = 
+				(parseFloat(document.getElementById('valor5').value) * parseFloat(document.getElementById('valor6').value)).toFixed(2);
+				
+			document.getElementById('mostrarDicas').style.display='none';	
+		}
+		
+		
+		// DIVIDIR  //
+		function dividir(){
+		
+			document.getElementById('total4').value = 
+				(parseFloat(document.getElementById('valor7').value) / parseFloat(document.getElementById('valor8').value)).toFixed(2);
+				
+				document.getElementById('mostrarDicas').style.display='none';	
+		}
+		
+		// MEDIA  //
+		function media(){
+			var nota1 = parseFloat(document.getElementById('valor9').value)*1;
+			var nota2 = parseFloat(document.getElementById('valor10').value)*2;
+			var nota3 = parseFloat(document.getElementById('valor11').value)*3;
+			
+			var soma = nota1 + nota2 + nota3;
+			var media = parseFloat(soma / 6).toFixed(2);
+			
+			if (media>=6){
+				document.body.style.backgroundColor = "green";
+			} else if (media>=4) {
+				document.body.style.backgroundColor = "yellow";			  
+			} else {
+				document.body.style.backgroundColor = "red";
+			}
+			
+			//var soma = parseFloat(document.getElementById('valor10').value) + parseFloat(document.getElementById('valor11').value) + parseFloat(document.getElementById('valor9').value);
+		
+			document.getElementById('total5').value = media;
+
+			document.getElementById('mostrarDicas').style.display='none';	
+		}
+
+	</script>
+	
+</head>
+
+<body>
+
+<header>
+	
+	<section id="titulo">
+		<h1>BLACKBOARD</h1>
+	</section>
+	
+</header>
+
+	<div style="clear:both;"> </div>
+
+<main>
+
+	<aside class="left">
+
+		<!-- DIV FIGURATIVA APENAS PARA INSERÇÃO DO BACKGROUND -->
+		
+	</aside>
+	
+	<section id="mostrarDicas">	
+		<textarea id="dicas" name="dicas" style="width: 180px; height: 300px;"></textarea>	
+	</section>
+
+	
+	<article class="center">
+	
+		<!-- DIV ONDE TODA MÍDIA SERÁ CARREGADA -->
+	
+		<nav>		
+			<table style="width: 100%;">			
+				<tr>				
+					<td align="center">
+						<a href="#soma">
+							<button onclick="mostrarDicas(1)" type="button" style="cursor:pointer;" />  SOMA </button>
+						</a>
+					</td>					
+					<td align="center">
+						<a href="#subtracao">
+							<button onclick="mostrarDicas(2)" type="button" style="cursor:pointer;" />  SUBTRAÇÃO </button>
+						</a>
+					</td>					
+					<td align="center">
+						<a href="#multiplicacao">
+							<button onclick="mostrarDicas(3)" type="button" style="cursor:pointer;" />  MULTIPLICAÇÃO </button>
+						</a>
+					</td>						
+					<td align="center">
+						<a href="#divisao">
+							<button onclick="mostrarDicas(4)" type="button" style="cursor:pointer;" />  DIVISÃO  </button>
+						</a>
+					</td>					
+				</tr>			
+			</table>
+						
+		</nav>	
+	
+			
+		<section id="soma" class="box" style="align: center;">		
+			<fieldset>
+				<legend>Vamos somar?</legend>
+				<div class="row">
+					<div class="col-90">
+
+						<label>Digite dois números: </label>
+						
+						<input type="text" value="" id="valor1" name="valor1" >
+						<label> + </label>							
+						<input type="text" value="" id="valor2" name="valor2">
+						<label> = </label>
+						<input type="text" value="" id="total1" name="total1" disabled="disabled">
+						
+					</div>				
+				</div>					
+				
+				<div class="row">
+					<div class="col-90" >
+						&nbsp;&nbsp;
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-90" style="text-align: right;">
+						<a href="#soma" onclick="somar()">
+						
+							<img src="icons/calculadora.png" width="25" >
+							<span>Efetuar soma</span>
+						</a>
+					</div>
+				</div>
+			</fieldset>				
+		</section>			
+		
+		
+		<section id="subtracao" class="box" style="align: center;">		
+			<fieldset>
+				<legend>Vamos subtrair?</legend>
+				<div class="row">
+					<div class="col-90">
+
+						<label>Digite dois números: </label>
+						
+						<input type="text" value="" id="valor3" name="valor3">
+						<label> - </label>							
+						<input type="text" value="" id="valor4" name="valor4">
+						<label> = </label>
+						<input type="text" value="" id="total2" name="total2" disabled="disabled">
+						
+					</div>				
+				</div>					
+				
+				<div class="row">
+					<div class="col-90" >
+						&nbsp;&nbsp;
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-90" style="text-align: right;">
+						<a href="#subtracao" onclick="subtrair()">
+						
+							<img src="icons/calculadora.png" width="25" >
+							<span>Efetuar subtração</span>
+						</a>
+					</div>
+				</div>
+			</fieldset>				
+		</section>	
+		
+		<section id="multiplicacao" class="box" style="align: center;">		
+			<fieldset>
+				<legend>Vamos multiplicar?</legend>
+				<div class="row">
+					<div class="col-90">
+
+						<label>Digite dois números: </label>
+						
+						<input type="text" value="" id="valor5" name="valor5">
+						<label> X </label>							
+						<input type="text" value="" id="valor6" name="valor6">
+						<label> = </label>
+						<input type="text" value="" id="total3" name="total3" disabled="disabled">
+						
+					</div>				
+				</div>					
+				
+				<div class="row">
+					<div class="col-90" >
+						&nbsp;&nbsp;
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-90" style="text-align: right;">
+						<a href="#multiplicacao" onclick="multiplicar()">
+						
+							<img src="icons/calculadora.png" width="25" >
+							<span>Efetuar multiplicação</span>
+						</a>
+					</div>
+				</div>
+			</fieldset>				
+		</section>
+		
+		<section id="divisao" class="box" style="align: center;">		
+			<fieldset>
+				<legend>Vamos dividir?</legend>
+				<div class="row">
+					<div class="col-90">
+
+						<label>Digite dois números: </label>
+						
+						<input type="text" value="" id="valor7" name="valor7">
+						<label> &divide; </label>							
+						<input type="text" value="" id="valor8" name="valor8">
+						<label> = </label>
+						<input type="text" value="" id="total4" name="total4" disabled="disabled">
+						
+					</div>				
+				</div>					
+				
+				<div class="row">
+					<div class="col-90" >
+						&nbsp;&nbsp;
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-90" style="text-align: right;">
+						<a href="#divisao" onclick="dividir()">
+						
+							<img src="icons/calculadora.png" width="25" >
+							<span>Efetuar divisão</span>
+						</a>
+					</div>
+				</div>
+			</fieldset>				
+		</section>
+		
+		<section id="media" class="box" style="align: center; width: 80%;">		
+			<fieldset>
+				<legend>Calcular média ponderada de 3 números:</legend>
+				<div class="row">
+					<div class="col-90">
+
+						<label>Digite os números: </label>
+						
+						<label> ( </label>
+						<input type="text" value="" id="valor9" name="valor9">
+						<label> + </label>							
+						<input type="text" value="" id="valor10" name="valor10">
+						<label> + </label>							
+						<input type="text" value="" id="valor11" name="valor11">
+						<label> ) </label>
+						<label> &divide; 3 </label>
+						<label> = </label>
+						<input type="text" value="" id="total5" name="total5" disabled="disabled">
+						
+					</div>				
+				</div>					
+				
+				<div class="row">
+					<div class="col-90" >
+						&nbsp;&nbsp;
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-90" style="text-align: right;">
+						<a href="#media" onclick="media()">
+						
+							<img src="icons/calculadora.png" width="25" >
+							<span>Efetuar cálculo</span>
+						</a>
+					</div>
+				</div>
+			</fieldset>				
+		</section>
+	
+</article>
+
+	<aside class="right">
+
+		<!-- DIV FIGURATIVA APENAS PARA INSERÇÃO DO BACKGROUND -->
+		
+	</aside>			
+		
+	<div style="clear:both;"> </div>
+
+</main>
+
+<footer>
+	<aside id="coluna" class="ghost" style="width: 18%; height: 50px; float: left; ">
+		
+	</aside>
+	<aside id="dados" class="ghost" style="float: left; border: 0px solid; width: 60%; font-size: 1.2em;">
+		
+		<font size="1" class="ghost">&copy; Copyright 2021 by <a href="#">Martinson Freitas</a> 
+		- Matrícula: 1920478300012 | CAW / FAETERJ </font>
+	</aside>
+	
+	<aside>
+		<a href="#media">
+			<button onclick="mostrarDicas(5)" style="cursor:pointer;" /> CALCULAR MÉDIA </button>
+		</a>
+	</aside>
+</footer>
+
+</body>
+</html>
